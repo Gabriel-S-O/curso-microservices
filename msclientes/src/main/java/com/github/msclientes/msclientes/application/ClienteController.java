@@ -3,6 +3,7 @@ package com.github.msclientes.msclientes.application;
 import com.github.msclientes.msclientes.application.representation.ClientSaveRequest;
 import com.github.msclientes.msclientes.domain.Cliente;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -13,13 +14,15 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/clientes")
 @RequiredArgsConstructor
+@Slf4j // log4j
 public class ClienteController {
 
     private final ClienteService service;
 
     @GetMapping
     public String status(){
-        return "Ok!";
+        log.info("----------Obtaining client microsservice status!----------");
+        return "Client, Ok!";
     }
 
     @PostMapping
