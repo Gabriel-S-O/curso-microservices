@@ -21,7 +21,7 @@ public class CartaoService {
     }
 
     @Transactional
-    public List<Cartao> getCartoesRendaMenorIgual(Long renda){
+    public List<Cartao>getCartoesRendaMenorIgual(Long renda){
         var rendaToBigDecimal = BigDecimal.valueOf(renda);
         return repository.findByRendaLessThanEqual(rendaToBigDecimal);
     }
