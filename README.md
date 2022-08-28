@@ -4,6 +4,7 @@ Aprendendo sobre arquitetura de microsserviços por meio de um [curso ministrado
 
 ## Principais tecnologias que serão utilizadas
 
+* Spring
 * Spring Cloud
 * Docker
 * RabbitMQ
