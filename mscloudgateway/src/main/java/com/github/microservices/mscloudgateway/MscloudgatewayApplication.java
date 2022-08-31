@@ -23,7 +23,7 @@ public class MscloudgatewayApplication {
 				.routes()
 				.route(rota -> rota.path("/clientes/**").uri("lb://msclientes"))
 				.route(rota -> rota.path("/cartoes/**").uri("lb://mscartoes"))
-				.route(rota -> rota.path("/avaliacos-credito/**").uri("lb://msavaliadorcredito"))
+				.route(rota -> rota.path("/avaliacoes-credito/**").uri("lb://msavaliadorcredito"))
 				.build();
 	}
 
