@@ -18,7 +18,6 @@ public class ClienteCartao {
     @Column
     private String cpf;
 
-    @Column
     @ManyToOne
     @JoinColumn(name = "id_cartao")
     private Cartao cartao;
