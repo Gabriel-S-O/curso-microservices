@@ -50,9 +50,6 @@ public class CartaoController {
         List<CartoesPorClienteResponse> resultList = lista.stream()
                 .map(CartoesPorClienteResponse::fromModel)
                 .collect(Collectors.toList());
-        if(resultList.isEmpty()){
-            return ResponseEntity.notFound().build();
-        }
         return ResponseEntity.ok(resultList);
     }
 }
