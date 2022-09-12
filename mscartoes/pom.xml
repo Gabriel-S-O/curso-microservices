@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.github.microservices</groupId>
-	<artifactId>mscartoes</artifactId>
+	<artifactId>mscards</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>mscartoes</name>
-	<description>Demo project for Spring Boot</description>
+	<name>mscards</name>
+	<description>Cards Microsservice</description>
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>2021.0.1</spring-cloud.version>

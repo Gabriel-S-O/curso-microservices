@@ -1,8 +1,8 @@
-package com.github.msavaliadorcredito.application;
+package com.github.mscreditevaluation.application;
 
-import com.github.msavaliadorcredito.application.exceptions.ClientDataNotFoundException;
-import com.github.msavaliadorcredito.application.exceptions.MicrosservicesCommuncationErrorException;
-import com.github.msavaliadorcredito.domain.model.SituacaoCliente;
+import com.github.mscreditevaluation.application.exceptions.ClientDataNotFoundException;
+import com.github.mscreditevaluation.application.exceptions.MicrosservicesCommuncationErrorException;
+import com.github.mscreditevaluation.domain.model.ClientSituation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("avaliacoes-credito")
+@RequestMapping("credit-evaluations")
 @RequiredArgsConstructor
 @Slf4j
-public class AvaliadorCreditoController {
+public class CreditEvaluationController {
 
-    private final AvaliadorCreditoService avaliadorCreditoService;
+    private final CreditEvaluationService creditEvaluationService;
 
     @GetMapping
     public String status(){
@@ -26,11 +26,11 @@ public class AvaliadorCreditoController {
         return "Credit Evaluation, Ok!";
     }
 
-    @GetMapping(value = "situacao-cliente", params = "cpf")
-    public ResponseEntity consultaSituacaoCliente(@RequestParam("cpf") String cpf){
+    @GetMapping(value = "client-situation", params = "cpf")
+    public ResponseEntity getClientSituation(@RequestParam("cpf") String cpf){
         try {
-            SituacaoCliente situacaoCliente = avaliadorCreditoService.obterSituacaoCliente(cpf);
-            return ResponseEntity.ok(situacaoCliente);
+            ClientSituation clientSituation = creditEvaluationService.getClientSituation(cpf);
+            return ResponseEntity.ok(clientSituation);
         } catch (ClientDataNotFoundException exception) {
             return ResponseEntity.notFound().build();
         } catch (MicrosservicesCommuncationErrorException exception) {

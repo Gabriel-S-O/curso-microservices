@@ -19,7 +19,7 @@ public class ClientCard {
     private String cpf;
 
     @ManyToOne
-    @JoinColumn(name = "id_card")
+    @JoinColumn(name = "card_id")
     private Card card;
 
     @Column

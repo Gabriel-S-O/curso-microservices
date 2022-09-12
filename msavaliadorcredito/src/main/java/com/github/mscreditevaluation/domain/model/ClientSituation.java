@@ -1,4 +1,4 @@
-package com.github.msavaliadorcredito.domain.model;
+package com.github.mscreditevaluation.domain.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,7 +11,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class SituacaoCliente {
-    private DadosCliente cliente;
-    private List<CartaoCliente> cartoes;
+public class ClientSituation {
+    private ClientData client;
+    private List<ClientCard> cards;
 }

@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.github</groupId>
-	<artifactId>msavaliadorcredito</artifactId>
+	<artifactId>mscreditevaluation</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>msavaliadorcredito</name>
-	<description>Demo project for Spring Boot</description>
+	<name>mscreditevaluation</name>
+	<description>Credit Evaluations Microsservice</description>
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>2021.0.1</spring-cloud.version>

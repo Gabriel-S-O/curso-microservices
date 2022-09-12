@@ -11,10 +11,10 @@
 	</parent>
 
 	<groupId>com.github.microservices</groupId>
-	<artifactId>msclientes</artifactId>
+	<artifactId>msclients</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>msclientes</name>
-	<description>Microsserviço dos Clientes</description>
+	<name>msclients</name>
+	<description>Clients Microsservice</description>
 
 	<properties>
 		<java.version>11</java.version>

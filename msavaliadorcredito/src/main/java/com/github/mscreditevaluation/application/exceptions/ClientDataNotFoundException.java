@@ -1,4 +1,4 @@
-package com.github.msavaliadorcredito.application.exceptions;
+package com.github.mscreditevaluation.application.exceptions;
 
 public class ClientDataNotFoundException extends Exception{
 

@@ -1,7 +1,7 @@
 
 spring:
   application:
-    name: msavaliadorcredito
+    name: mscreditevaluation
 
 server:
   port: 0
