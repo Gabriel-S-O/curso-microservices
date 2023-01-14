@@ -9,12 +9,12 @@ import java.math.BigDecimal;
 @Data
 public class CardSaveRequest {
 
-    private String nome;
-    private CardFlag bandeira;
-    private BigDecimal renda;
-    private BigDecimal limite;
+    private String name;
+    private CardFlag cardFlag;
+    private BigDecimal rent;
+    private BigDecimal limit;
 
     public Card toModel(){
-        return new Card(nome, bandeira, renda, limite);
+        return new Card(name, cardFlag, rent, limit);
     }
 }
